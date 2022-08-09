@@ -9,13 +9,21 @@ Copy `edit.fish` in `~/.config/fish/functions/`
 You can also use curl
 
 ```sh
-curl -o ~/.config/fish/functions/edit.fish https://raw.githubusercontent.com/kowalski7cc/fish-edit/master/edit.fish
+curl -o $XDG_CONFIG_HOME/fish/functions/edit.fish \
+https://raw.githubusercontent.com/kowalski7cc/fish-edit/master/edit.fish
 ```
 
 or wget
 
 ```sh
-wget -O ~/.config/fish/functions/edit.fish https://raw.githubusercontent.com/kowalski7cc/fish-edit/master/edit.fish
+wget -O $XDG_CONFIG_HOME/fish/functions/edit.fish \
+https://raw.githubusercontent.com/kowalski7cc/fish-edit/master/edit.fish
+```
+
+It will be automatically loaded when fish is launched. You can also load it manually without restarting fish with
+
+```sh
+source $XDG_CONFIG_HOME/fish/functions/edit.fish
 ```
 
 ## How it works
